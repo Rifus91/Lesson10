@@ -6,6 +6,7 @@ namespace Lesson10
     {
         public const bool isMan = true;
         public const bool isWomen = false;
+
         public const byte Monday = 1;
         public const byte Tuesday = 2;
         public const byte Wednesday = 3;
@@ -13,6 +14,9 @@ namespace Lesson10
         public const byte Fridey = 5;
         public const byte Saturday = 6;
         public const byte Sanday = 7;
+
+        public const string ProgramName = "Календарь";
+
         static void Main(string[] args)
         {
             //ввод от клиента, пол и имя
