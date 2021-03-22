@@ -10,9 +10,9 @@ namespace Lesson10
         static void Main(string[] args)
         {
             //ввод от клиента, пол и имя
-             //Step1(GenderEnum.Women, "Иванова Ольга");
+             Step1(GenderEnum.Women, "Иванова Ольга");
             
-            StepWeek1((DayOfWeekEnum)5);
+            StepWeek1(DayOfWeekEnum.Monday);
         }
 
        
@@ -32,13 +32,46 @@ namespace Lesson10
         static void StepWeek1(DayOfWeekEnum dayOfWeek)
         {
             if (dayOfWeek == DayOfWeekEnum.Saturday || dayOfWeek == DayOfWeekEnum.Sanday)
-            { Console.WriteLine($"{dayOfWeek} - Выходной день"); }
+            { Console.WriteLine($"{DayToRussian(dayOfWeek)} - Выходной день"); }
             else
-            { Console.WriteLine($"{dayOfWeek} - Рабочий день"); }
+            { Console.WriteLine($"{DayToRussian(dayOfWeek)} - Рабочий день"); }
         }
 
-       
-        
+        static string DayToRussian(DayOfWeekEnum dayOfWeek)
+        {
+            string output = "";
+            switch (dayOfWeek)
+            {
+                case DayOfWeekEnum.Monday:
+                    output = "Понедельник";
+                    break;
+                case DayOfWeekEnum.Tuesday:
+                    output = "Вторник";
+                    break;
+                case DayOfWeekEnum.Wednesday:
+                    output = "Среда";
+                    break;
+                case DayOfWeekEnum.Thursday:
+                    output = "Четверг";
+                    break;
+                case DayOfWeekEnum.Fridey:
+                    output = "Пятница";
+                    break;
+                case DayOfWeekEnum.Saturday:
+                    output = "Суббота";
+                    break;
+                case DayOfWeekEnum.Sanday:
+                    output = "Воскресенье";
+                    break;
+                default:
+                    break;
+            }
+            return output;
+        }
+
+
+
+
 
 
     }
