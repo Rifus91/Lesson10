@@ -13,6 +13,8 @@ namespace Lesson10
              Step1(GenderEnum.Women, "Иванова Ольга");
             
             StepWeek1(DayOfWeekEnum.Monday);
+
+            PrintAllDays();
         }
 
        
@@ -67,6 +69,14 @@ namespace Lesson10
                     break;
             }
             return output;
+        }
+
+        static void PrintAllDays()
+        {
+            foreach (var item in Enum.GetValues(typeof(DayOfWeekEnum)))
+            {
+                Console.WriteLine(item);
+            }
         }
 
 
