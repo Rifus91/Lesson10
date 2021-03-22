@@ -1,6 +1,6 @@
 ﻿namespace Lesson10
 {
-    enum DayOfWeekEnum
+    enum DayOfWeekEnum : byte
     {
         Monday = 1,
         Tuesday = 2,
