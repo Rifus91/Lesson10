@@ -6,6 +6,8 @@ namespace Lesson10
     {
         public const bool isMan = true;
         public const bool isWomen = false;
+        public const byte Saturday = 6;
+        public const byte Sanday = 7;
         static void Main(string[] args)
         {
             //ввод от клиента, пол и имя
@@ -42,7 +44,7 @@ namespace Lesson10
 
         static void StepWeek1(byte dayOfWeek)
         {
-            if (dayOfWeek == 6 || dayOfWeek == 7) // дни недели 6-7 выходные, 1...5 рабочие
+            if (dayOfWeek == Saturday || dayOfWeek == Sanday) // 1..7 дни недели, 6-7 выходные, 1...5 рабочие
             { Console.WriteLine("Выходной день"); }
             else
             { Console.WriteLine("Рабочий день"); }
