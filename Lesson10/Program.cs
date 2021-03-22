@@ -4,13 +4,14 @@ namespace Lesson10
 {
     class Program
     {
-        public  const bool isMan = true;
-        public  const bool isWomen = false;
+        public const bool isMan = true;
+        public const bool isWomen = false;
         static void Main(string[] args)
         {
             //ввод от клиента, пол и имя
-           // Step2(false, "Иванова Ольга");
-            Step1(true, "Петров Иван");
+            // Step1(false, "Иванова Ольга");
+            //Step2(true, "Петров Иван");
+            StepWeek1(8);
         }
 
         static void Step1(bool gender, string name)
@@ -19,16 +20,16 @@ namespace Lesson10
             {
                 Console.WriteLine($"Уважаемый, {name}!");
             }
-            else 
+            else
             {
                 Console.WriteLine($"Уважаемая, {name}!");
             }
-            Console.WriteLine("Приветствуем на нашем сайте!");                
+            Console.WriteLine("Приветствуем на нашем сайте!");
         }
 
         static void Step2(bool gender, string name)
         {
-            if (gender == isMan) 
+            if (gender == isMan)
             {
                 Console.WriteLine($"Уважаемый, {name}!");
             }
@@ -37,6 +38,14 @@ namespace Lesson10
                 Console.WriteLine($"Уважаемая, {name}!");
             }
             Console.WriteLine("Приветствуем на нашем сайте!");
+        }
+
+        static void StepWeek1(byte dayOfWeek)
+        {
+            if (dayOfWeek == 6 || dayOfWeek == 7) // дни недели 6-7 выходные, 1...5 рабочие
+            { Console.WriteLine("Выходной день"); }
+            else
+            { Console.WriteLine("Рабочий день"); }
         }
 
 
